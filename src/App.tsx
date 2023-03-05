@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+
+import './App.scss';
+import {Button} from "./components/Button";
+import {Counter} from "./components/Counter";
+import {SettingsCounter} from "./components/SettingsCounter";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [maxValue, setMaxValue] = useState<number>(0);
+    const [startValue, setStartValue] = useState<number>(0);
+    const [count, setCount] = useState<number>(startValue);
+
+    const [error, setError] = useState<string | null>(null);
+    const [inputError, setInputError] = useState(false);
+    
+    return (
+        <div className="App">
+            <SettingsCounter count={count}
+                             startValue={startValue}
+                             setStartValue={setStartValue}
+                             setCount={setCount}
+                             maxValue={maxValue}
+                             setMaxValue={setMaxValue}
+                             error={error}
+                             setError={setError}
+                             inputError={inputError}
+            />
+            <Counter maxValue={maxValue}
+                     startValue={startValue}
+                     count={count}
+                     setCount={setCount}
+                     error={error}
+                     setError={setError}
+                     inputError={inputError}
+                     setInputError={setInputError}/>
+        </div>
+    );
 }
 
 export default App;

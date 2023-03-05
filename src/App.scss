@@ -1,0 +1,92 @@
+$main-color: #232424;
+$second-color: #f76fb1;
+body {
+  background-color: $main-color;
+}
+
+.App {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wrapper {
+  background-color: $main-color;
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  border: 4px solid $second-color;
+  color: $second-color;
+}
+
+.countWrapper {
+  display: block;
+  margin: 30px auto;
+  width: 300px;
+  height: 100px;
+  background-color: #232424;
+  border-radius: 10px;
+  font-size: 70px;
+  border: 4px solid $second-color;
+
+}
+
+.buttonsWrapper {
+  display: block;
+  margin: 40px auto;
+  width: 300px;
+  height: 90px;
+  border: 4px solid $second-color;
+  border-radius: 10px;
+}
+
+.err {
+  color: red;
+}
+
+.buttons {
+  margin-top: 30px;
+  height: 30px;
+  width: 120px;
+  background-color: #232424;
+  border: 4px solid $second-color;
+  color: $second-color;
+  border-radius: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  margin-top: 20px;
+  padding: 0 15px;
+  font-size: 20px;
+  color: $second-color;
+}
+
+.input {
+  background-color: $main-color;
+  max-width: 60px;
+  height: 25px;
+  border: 4px solid $second-color;
+  color: $second-color;
+  font-size: 25px;
+  text-align: center;
+}
+.inputErr {
+  background-color: $main-color;
+  max-width: 60px;
+  height: 25px;
+  border: 4px solid red;
+  font-size: 25px;
+  text-align: center;
+  color: red;
+}
+
+.counterText{
+  margin-top: 30px;
+  color: $second-color;
+  font-size: 20px;
+  text-align: center;
+}
